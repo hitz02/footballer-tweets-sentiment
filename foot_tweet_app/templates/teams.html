@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block body_block%}
+{% block content %}
+<body>
+  <script type="text/javascript">
+    document.getElementById("headr").innerHTML="{{ team_name }}";
+    </script>    
+  <a style="float: right;padding-right: 5%; font-size:30px" href = "javascript:history.back()"><i class="fa fa-arrow-circle-left"></i></a>
+  <br>
+   <div class="float-container">
+    <div class="float-child-left">
+      <table>
+      <!-- <table style="width:50%; float: left;"> -->
+        <tr>
+          <th>Recent Tweets - <i>{{ team_name }}</i></th>
+        </tr>
+        {% for tweet in team_tweets %}
+        <tr>
+            <td style="text-align: left;">{{ tweet }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    
+    <div class="float-child-right">
+      <!-- <table style="width:50%; float: left;"> -->
+        <table>
+        <tr>
+          <th>Position of Player</th>
+          <th>Player Name</th>
+        </tr>
+        {% for t in team %}
+        <tr>
+            <td>{{ t.player_position }}</td>
+            <td><a href="{% url 'foot_tweet_app:show_player' %}?player_name={{ t.player_name }}">{{ t.player_name }}</a></td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    </div>
+ 
+<style>
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: blueviolet;
+}
+
+table {
+  border-spacing: 5px;
+}
+</style>
+</body>
+{% endblock %}
+{% endblock %}
+</html>

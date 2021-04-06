@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Foot Tweet </title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("body").on('click', '.top', function() {
+                $("nav.menu").toggleClass("menu_show");
+            });
+        });
+        </script>
+
+</head>
+<body>
+    <header>
+		<h1 id="headr">Affect of the pandemic on premier league footballers</h1>
+	</header>
+    
+    <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+   
+          <ul id="menu">
+            <a href="/foot_tweet_app/"><li>Home</li></a>
+            <a href="{% url 'foot_tweet_app:help' %}"><li>Help</li></a>
+          </ul>
+        </div>
+      </nav>
+    {% block content %}
+    <div id='container'>   
+            <div id='button1'>
+                    <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Arsenal">
+                        <img src="{% static "images/arsenal.png" %}" alt="Arsenal" />
+                    </a><br>
+                    <h3 style="text-align: center; margin-block-start: 0px;">Arsenal</h3>
+            </div>
+                  
+           <div id='button1'>
+                <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Aston Villa">
+                    <img src="{% static "images/AstonVilla.png" %}" alt="AstonVilla" />
+                </a>
+                <h3 style="text-align: center; margin-block-start: 0px;">Aston Villa</h3>
+            </div>
+           <div id='button1'>
+                <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Brighton and Hove Albion">
+                    <img src="{% static "images/brighton_and_hove_albion.png" %}" alt="brighton_and_hove_albion" />
+                </a>
+                <h3 style="text-align: center; margin-block-start: 0px;">Brighton and Hove Albion</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Burnley">
+               <img src="{% static "images/burnley.png" %}" alt="burnley" />
+            </a>
+            <h3 style="text-align: center; margin-block-start: 0px;">Burnley</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Chelsea">
+               <img src="{% static "images/chelsea.png" %}" alt="chelsea" />
+            </a>
+            <h3 style="text-align: center; margin-block-start: 0px;">Chelsea</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Crystal Palace">
+               <img src="{% static "images/crystal_palace.png" %}" alt="crystal_palace" />
+            </a>
+            <h3 style="text-align: center; margin-block-start: 0px;">Crystal Palace</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Everton">
+               <img src="{% static "images/everton.png" %}" alt="everton" />
+            </a>
+            <h3 style="text-align: center; margin-block-start: 0px;">Everton</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Fulham">
+               <img src="{% static "images/fulham.png" %}" alt="fulham" />
+            </a>
+            <h3 style="text-align: center; margin-block-start: 0px;">Fulham</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Leeds United">
+                <img src="{% static "images/leeds_united.png" %}" alt="leeds_united" />
+            </a> 
+            <h3 style="text-align: center; margin-block-start: 0px;">Leeds United</h3>  
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Leicester City">  
+                <img src="{% static "images/leicester_city.png" %}" alt="leicester_city" />
+            </a> 
+            <h3 style="text-align: center; margin-block-start: 0px;">Leicester City</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Liverpool"> 
+                <img src="{% static "images/liverpool.png" %}" alt="liverpool" />
+            </a> 
+            <h3 style="text-align: center; margin-block-start: 0px;">Liverpool</h3> 
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Manchester City">   
+                <img src="{% static "images/manchester_city.png" %}" alt="manchester_city" />
+            </a>
+            <h3 style="text-align: center; margin-block-start: 0px;">Manchester City</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Manchester United">   
+                <img src="{% static "images/manchester_united.png" %}" alt="manchester_united" />
+            </a>
+            <h3 style="text-align: center; margin-block-start: 0px;">Manchester United</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Newcastle United">   
+                <img src="{% static "images/newcastle_united.png" %}" alt="newcastle_united" />
+            </a>
+            <h3 style="text-align: center; margin-block-start: 0px;">Newcastle United</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Sheffield United">
+                <img src="{% static "images/sheffield_united.png" %}" alt="sheffield_united" />
+            </a> 
+            <h3 style="text-align: center; margin-block-start: 0px;">Sheffield United</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Southampton">   
+                <img src="{% static "images/southampton.png" %}" alt="southampton" />
+            </a>
+            <h3 style="text-align: center; margin-block-start: 0px;">Southampton</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Tottenham Hotspur">  
+                <img src="{% static "images/tottenham_hotspur.png" %}" alt="tottenham_hotspur" />
+            </a> 
+            <h3 style="text-align: center; margin-block-start: 0px;">Tottenham Hotspur</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=West Bromwich Albion">   
+                <img src="{% static "images/West_Bromwich_Albion.png" %}" alt="West_Bromwich_Albion" />
+            </a>
+            <h3 style="text-align: center; margin-block-start: 0px;">West Bromwich Albion</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=West Ham United">  
+                <img src="{% static "images/West_Ham_United.png" %}" alt="West_Ham_United" />
+            </a> 
+            <h3 style="text-align: center; margin-block-start: 0px;">West Ham United</h3>
+            </div>
+           <div id='button1'>
+            <a href="{% url 'foot_tweet_app:show_team' %}?team_name=Wolverhampton Wanderers">
+                <img src="{% static "images/Wolverhampton_Wanderers.png" %}" alt="Wolverhampton_Wanderers" />
+            </a>  
+            <h3 style="text-align: center; margin-block-start: 0px;">Wolverhampton Wanderers</h3>
+            </div>
+     </div>
+     {% endblock %}
+</body>
+</html>

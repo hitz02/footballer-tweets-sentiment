@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block body_block%}
+{% block content %}
+<body>
+    <script type="text/javascript">
+        document.getElementById("headr").innerHTML="{{ player_name }}";
+        </script>
+
+    <a style="float: right;padding-right: 5%; font-size:30px" href = "javascript:history.back()"><i class="fa fa-arrow-circle-left"></i></a>
+
+    <div id="container" style="width: 700px; height: 400px; padding-left:20% ;"></div>
+        <script src="https://code.highcharts.com/highcharts.src.js"></script>
+        <script type="text/javascript">
+            Highcharts.chart('container', {{ chart|safe }});
+        </script>
+        
+        <br>
+
+    <div style="padding: 10px; border: groove; margin: auto; width: 650px;">
+        <h3 style="text-align: center;">{{ insight }}</h3>
+        </div>
+
+</body>
+{% endblock %}
+{% endblock %}
+</html>
