@@ -1,0 +1,15 @@
+dj-database-url==0.5.0
+Django==3.1.7
+django-heroku==0.3.1
+emoji==1.2.0
+gunicorn==20.1.0
+nltk==3.5
+pandas==1.1.5
+numpy==1.19.5
+psycopg2==2.8.6
+python-decouple==3.4
+textblob==0.15.3
+tqdm==4.60.0
+tweepy==3.10.0
+tweet-preprocessor==0.6.0
+whitenoise==5.2.0
