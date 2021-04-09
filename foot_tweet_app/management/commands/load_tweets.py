@@ -15,11 +15,10 @@ if not sys.warnoptions:
 
 print('Performing Twitter Authentication')
 # Authenticate to Twitter
-auth = tweepy.OAuthHandler("N0bTi7FaXETWozggYmoBQJmJ8",
-    "gL5SBYM4MRudeucakSoi8bh9T0yM5AEVBCRsHQbcxB7vWFkJml")
 
-auth.set_access_token("1358757704165187584-FSUKL1tGalSqkFSdjugEHD1cyrCmey",
-    "qhyp31p6N0WEKgOfp3sPVToFxxRcqDu29BxEUecOzBJOh")
+auth = tweepy.OAuthHandler(os.environ.get('API_KEY'),os.environ.get('API_KEY_SECRET'))
+
+auth.set_access_token(os.environ.get('ACCESS_TOKEN'),os.environ.get('ACCESS_TOKEN_SECRET'))
 
 api = tweepy.API(auth)
 
