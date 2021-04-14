@@ -13,7 +13,7 @@ class Tweets(models.Model):
     player_name = models.CharField(max_length=150)
     screen_name = models.CharField(max_length=150,default='NA')
     created_at = models.CharField(max_length=100)
-    tweet = models.CharField(max_length=500)
+    tweet = models.CharField(max_length=1000)
     language = models.CharField(max_length=5)
     covid_time = models.IntegerField(default=9)
 
@@ -21,6 +21,6 @@ class Sentiment(models.Model):
     player_name = models.CharField(max_length=150)
     screen_name = models.CharField(max_length=150)
     created_at = models.CharField(max_length=100)
-    cleaned_tweet = models.CharField(max_length=500)
+    cleaned_tweet = models.CharField(max_length=1000)
     covid_time = models.IntegerField(default=9)
     sentiment = models.CharField(max_length=15)
