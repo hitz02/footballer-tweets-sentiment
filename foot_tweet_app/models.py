@@ -9,7 +9,7 @@ class Twitter_Handles(models.Model):
     player_position = models.CharField(max_length=10,default='')
 
 class Tweets(models.Model):
-    handle_id = models.IntegerField(default=0)
+    handle_id = models.BigIntegerField(default=0)
     player_name = models.CharField(max_length=150)
     screen_name = models.CharField(max_length=150,default='NA')
     created_at = models.CharField(max_length=100)
