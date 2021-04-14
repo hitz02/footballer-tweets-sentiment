@@ -8,6 +8,7 @@ import time
 from datetime import datetime
 import sys
 import json
+import os
 
 if not sys.warnoptions:
     import warnings
@@ -32,7 +33,7 @@ except:
 def get_tweets(sc_name):
     tweets = api.user_timeline(screen_name=sc_name,
                                # 200 is the maximum allowed count keeping 100 for now
-                               count=100,
+                               count=200,
                                include_rts = False,
                                # Necessary to keep full_text
                                # otherwise only the first 140 words are extracted
